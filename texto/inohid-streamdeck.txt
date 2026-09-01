@@ -1,7 +1,7 @@
 Título: InoHid — Low-budget Streamdeck
 Categoria: Identidade Visual / Banner Twitch & GitHub
 Data: 2026
-Ferramentas: Figma, Illustrator, Design de Interface
+Ferramentas: Canva
 
 Descrição do Conceito:
 Arte de capa e banner panorâmico desenvolvido para o projeto de código aberto 'InoHid - Low-budget StreamDeck' com transmissão ao vivo na Twitch.
