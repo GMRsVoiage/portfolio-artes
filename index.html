@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Artes & Comunicação | gmrsvoiage</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 40px auto 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .skills-tag {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .filter-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: bold;
+        }
+
+        .gallery {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #334155;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            max-width: 1000px;
+            margin: 60px auto 20px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portfólio de Artes & Mídia</h1>
+        <p>Design Gráfico, Edição Mídia Social, Identidade Visual e Conteúdo Audiovisual.</p>
+        
+        <div class="skills-tag">
+            <span class="tag">Design Gráfico</span>
+            <span class="tag">Social Media</span>
+            <span class="tag">Edição de Vídeo</span>
+            <span class="tag">Identidade Visual</span>
+            <span class="tag">Fotografia</span>
+        </div>
+    </header>
+
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterGallery('all')">Todos</button>
+        <button class="filter-btn" onclick="filterGallery('design')">Design & Gráficos</button>
+        <button class="filter-btn" onclick="filterGallery('social')">Redes Sociais</button>
+        <button class="filter-btn" onclick="filterGallery('video')">Vídeos & Lives</button>
+    </div>
+
+    <section class="gallery">
+        <!-- Trabalho 1 -->
+        <article class="card" data-category="design">
+            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=Cartaz+Evento" alt="Cartaz para Evento" class="card-img">
+            <div class="card-content">
+                <div class="card-category">Design & Material Gráfico</div>
+                <h2 class="card-title">Cartaz Promocional de Eventos</h2>
+                <p class="card-desc">Desenvolvimento de layout e composição visual para divulgação impressa e digital de eventos e palestras.</p>
+            </div>
+        </article>
+
+        <!-- Trabalho 2 -->
+        <article class="card" data-category="social">
+            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=Artes+Instagram" alt="Posts para Redes Sociais" class="card-img">
+            <div class="card-content">
+                <div class="card-category">Redes Sociais</div>
+                <h2 class="card-title">Campanha de Posts para Instagram</h2>
+                <p class="card-desc">Criação de templates, carrosséis informativos e artes engajadoras focadas em comunicação institucional.</p>
+            </div>
+        </article>
+
+        <!-- Trabalho 3 -->
+        <article class="card" data-category="video">
+            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=Overlay+e+Livestream" alt="Identidade de Stream" class="card-img">
+            <div class="card-content">
+                <div class="card-category">Vídeos & Lives</div>
+                <h2 class="card-title">Identidade Visual para Transmissões</h2>
+                <p class="card-desc">Criação de overlays, alertas animados e banners para transmissões ao vivo e canais digitais.</p>
+            </div>
+        </article>
+
+        <!-- Trabalho 4 -->
+        <article class="card" data-category="video">
+            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=Edicao+de+Video" alt="Edição de Vídeo" class="card-img">
+            <div class="card-content">
+                <div class="card-category">Vídeos & Lives</div>
+                <h2 class="card-title">Cortes e Edição de Vídeo Curto</h2>
+                <p class="card-desc">Montagem, tratamento de áudio, legendas dinâmicas e edição para formatos verticais (Reels/Shorts).</p>
+            </div>
+        </article>
+
+        <!-- Trabalho 5 -->
+        <article class="card" data-category="design">
+            <img src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=Fotografia+e+Tratamento" alt="Fotografia de Eventos" class="card-img">
+            <div class="card-content">
+                <div class="card-category">Design & Fotografia</div>
+                <h2 class="card-title">Registro Fotográfico & Tratamento</h2>
+                <p class="card-desc">Captação fotográfica, correção de cor e tratamento de imagem para acervo e divulgação de atividades.</p>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Portfólio de Artes | <a href="https://gmrsvoiage.com.br">gmrsvoiage.com.br</a></p>
+    </footer>
+
+    <script>
+        function filterGallery(category) {
+            const cards = document.querySelectorAll('.card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
