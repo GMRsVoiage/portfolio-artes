@@ -6,10 +6,14 @@
     <title>Portfólio: Artes - GMRsVoiage</title>
 
     <!-- ===================================================================
-         FAVICON DINÂMICO / ANIMADO
+         FAVICON PADRÃO DA PÁGINA
          =================================================================== -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/gif" href="favicon.gif">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Fontes Estilo Retrofuturista e UI Clássica -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -279,7 +283,7 @@
         }
 
         /* ===================================================================
-           CORPO PRINCIPAL & GALERIA DE ARTES MASONRY
+           CORPO PRINCIPAL & GALERIA DE ARTES MASONRY AUTO-REAJUSTÁVEL
            =================================================================== */
         main.gallery-container {
             position: relative;
@@ -471,7 +475,7 @@
         }
 
         /* ===================================================================
-           MODAL / JANELA AERO GLASS SYNTHWAVE
+           MODAL / JANELA AERO GLASS SYNTHWAVE (LADO A LADO)
            =================================================================== */
         .modal-overlay {
             position: fixed;
@@ -830,31 +834,23 @@
             </div>
         </a>
 
-        <!-- ===================================================================
-             REDES SOCIAIS SIMPLIFICADAS COM SIMPLE ICONS (CDN)
-             Para adicionar novas redes (ex: discord, bluesky, artstation, tiktok):
-             Basta duplicar 1 linha e mudar o nome do ícone na URL do simpleicons!
-             =================================================================== -->
+        <!-- REDES SOCIAIS COM SIMPLE ICONS (CDN) -->
         <nav class="social-nav" aria-label="Redes Sociais">
-            <!-- GITHUB -->
             <a href="https://github.com/GMRsVoiage" target="_blank" rel="noopener noreferrer" class="social-link github" title="GitHub">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" class="social-icon">
                 <span class="social-text">GitHub // @GMRsVoiage</span>
             </a>
 
-            <!-- TWITCH -->
             <a href="https://www.twitch.tv/rafaelmanu001" target="_blank" rel="noopener noreferrer" class="social-link twitch" title="Twitch">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitch.svg" alt="Twitch" class="social-icon">
                 <span class="social-text">Twitch // Rafaelmanu001</span>
             </a>
 
-            <!-- INSTAGRAM -->
             <a href="https://www.instagram.com/rafaelmanu001" target="_blank" rel="noopener noreferrer" class="social-link instagram" title="Instagram">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" class="social-icon">
                 <span class="social-text">Instagram // @rafaelmanu001</span>
             </a>
 
-            <!-- YOUTUBE -->
             <a href="https://www.youtube.com/@rafaelmanu001" target="_blank" rel="noopener noreferrer" class="social-link youtube" title="YouTube">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube" class="social-icon">
                 <span class="social-text">YouTube // @rafaelmanu001</span>
@@ -865,7 +861,7 @@
     <!-- GALERIA MASONRY -->
     <main class="gallery-container">
         <section class="gallery-wireframe" id="artGallery">
-            <!-- Auto-descoberto e renderizado via JS -->
+            <!-- Renderizado dinamicamente -->
         </section>
     </main>
 
